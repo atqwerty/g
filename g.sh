@@ -1,10 +1,11 @@
 #!/bin/sh
 
-while getopts :fxra option
+while getopts :fxrad option
   do
    case "$option" in
      a) git add .
        exit 1;;
+     d) git diff;;
      x) OPTION="fix";;
      f) OPTION="feat";;
      r) OPTION="refactor";;
